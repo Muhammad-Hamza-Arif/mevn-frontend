@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import CreateTask from "../components/CreateTask.vue"
+import ReadTaskView from "../views/ReadTaskView.vue"
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'create',
+    component: CreateTask
   },
   {
     path: '/about',
@@ -16,6 +17,11 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
+  },
+  {
+    path: '/readtaskview',
+    name: 'readtask',
+    component: ReadTaskView
   }
 ]
 
